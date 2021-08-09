@@ -1,21 +1,21 @@
-const Page = require('./page');
+const Page = require("./page");
 
 class DashboardPage extends Page {
-    get btnNext () { return $('div=next') }
-    get getCreateContract() { return $('//*[@id="root"]/div/div/div/div[1]/div[1]/h1') }
+  get btnNext() { return $("div=next"); }
 
-    async goNext () {
-        await this.btnNext.click();
-    }
+  get getCreateContract() { return $("//*[@id=\"root\"]/div/div/div/div[1]/div[1]/h1"); }
 
-    createFixedRateContract () {
-        return super.open('create/fixed');
-    }
+  async goNext() {
+    await this.btnNext.click();
+  }
 
-    createPYGContract () {
-        return super.open('create/pay-as-you-go');
-    }
+  createFixedRateContract() {
+    return super.open("create/fixed");
+  }
 
+  createPYGContract() {
+    return super.open("create/pay-as-you-go");
+  }
 }
 
 module.exports = new DashboardPage();

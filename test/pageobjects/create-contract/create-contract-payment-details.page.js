@@ -1,30 +1,33 @@
-const Page = require('../page');
+const Page = require("../page");
 
 class ContractPaymentDetailsPage extends Page {
-    get inputRate () { return  $('[name="rate"]') }
-    get inputCurrency () { return  $('div=USD - US Dollar') }
-    get inputFixedPaymentSchedule() { return  $('div=Month') }
-    get inputPYGPaymentSchedule() { return  $('div=Hour') }
+  get inputRate() { return $("[name=\"rate\"]"); }
 
-    async fillFixedPaymentDetails(rate, currency, schedule) {
-        await this.inputRate.setValue(rate);
+  get inputCurrency() { return $("div=USD - US Dollar"); }
 
-        await this.inputCurrency.click();
-        await $("div=" + currency.toString()).click();
+  get inputFixedPaymentSchedule() { return $("div=Month"); }
 
-        await this.inputFixedPaymentSchedule.click();
-        await $("div=" + schedule.toString()).click();
-    }
+  get inputPYGPaymentSchedule() { return $("div=Hour"); }
 
-    async fillPYGPaymentDetails(rate, currency, schedule) {
-        await this.inputRate.setValue(rate);
+  async fillFixedPaymentDetails(rate, currency, schedule) {
+    await this.inputRate.setValue(rate);
 
-        await this.inputCurrency.click();
-        await $("div=" + currency.toString()).click();
+    await this.inputCurrency.click();
+    await $(`div=${currency.toString()}`).click();
 
-        await this.inputPYGPaymentSchedule.click();
-        await $("div=" + schedule.toString()).click();
-    }
+    await this.inputFixedPaymentSchedule.click();
+    await $(`div=${schedule.toString()}`).click();
+  }
+
+  async fillPYGPaymentDetails(rate, currency, schedule) {
+    await this.inputRate.setValue(rate);
+
+    await this.inputCurrency.click();
+    await $(`div=${currency.toString()}`).click();
+
+    await this.inputPYGPaymentSchedule.click();
+    await $(`div=${schedule.toString()}`).click();
+  }
 }
 
 module.exports = new ContractPaymentDetailsPage();
