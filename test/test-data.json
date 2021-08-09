@@ -1,0 +1,28 @@
+[
+    {
+        "username" : "enzoofurlan@gmail.com",
+        "password": "deelQatest*52"
+    },
+    {
+        "contractName": "Enzo Fixed Rate Contract",
+        "jobTitle": "Remote Engineer",
+        "scopeOfWork": "This position is remote.",
+        "rate": "1000",
+        "currency": "GBP - British Pound", 
+        "paymentSchedule": "Week",
+        "specialClause": "This is the special clause.",
+        "residenceCountry": "United States",
+        "residenceState": "Colorado"
+    },
+    {
+        "contractName": "Enzo Pay as You Go Contract",
+        "jobTitle": "Remote Engineer",
+        "scopeOfWork": "This position is remote.",
+        "rate": "500",
+        "currency": "BRL - Brazilian Real", 
+        "paymentSchedule": "Hour",
+        "specialClause": "This is the special clause.",
+        "residenceCountry": "United States",
+        "residenceState": "Texas"
+    }
+]
